@@ -23,7 +23,7 @@ const App = () => {
   )}
   return (
     <div>
-      <h1>useFromStatus Hook in React js 19</h1>
+      <h1>useFromStatus Hook in React js 19 tutorial</h1>
       <form action={handleSubmit}>
         <CustomForm />
       </form>
