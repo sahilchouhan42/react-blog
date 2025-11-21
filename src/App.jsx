@@ -18,7 +18,7 @@ const App = () => {
         <br /><br />
         <input type="password" name="" id="password" placeholder='enter your password' />
         <br /><br />
-        <button disabled={pending}>{pending?"Submitting...": "Submit"}</button>
+        <button disabled={pending}>{pending?"Submitting.....": "Submit"}</button>
     </div>
   )}
   return (
