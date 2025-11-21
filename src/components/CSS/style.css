@@ -1,0 +1,16 @@
+.heading{
+    color: red;
+}
+
+.img-style{
+    width: 11rem;
+    height: 12rem;
+}
+
+.user-card{
+    width: 11rem;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    margin: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+.heading{
+    color: red;
+    border-bottom: 1px solid black;
+    border-radius: 0 0 10px 10px;
+
+}
+img{
+    width: 10rem;
+    height: 11rem;
+}
+
+.card{
+    border: 1px solid black;
+    width: 11rem;
+    text-align: center;
+    padding: 1rem;
+}
