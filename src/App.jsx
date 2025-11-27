@@ -1,43 +1,41 @@
-import { useState } from "react"
+import React, { useState } from 'react'
 
 const App = () => {
-  // const [name, setName] = useState("anil")
-  const [data, setData] = useState({
-    name: "Anil",
-    address:{
-      city: "Delhi",
-      country: "India"
-    }
-  })
+  const [data, setData] = useState(['anil', 'sam', 'peter'])
 
-  const handleName = (value) => {
-    data.name = value
-    // console.log(data)
-    setData({...data})
+  const [dataDetails, setDataDetails] = useState ([
+    {name: 'anil', age:26},
+    {name: 'sam', age:27},
+    {name: 'bruce', age:28},
+  ])
+  const handleUser = (name)=>{
+    data[data.length-1] = name
+    console.log(data)
+    setData([...data])
   }
 
-  const handleCity = (value)=>{
-    data.address.city = value
-    setData({...data})
-
-  }
-
-  const handleCountry = (value)=>{
-    data.address.country = value
-    setData({...data})
+  const handleAge = (age)=>{
+    dataDetails[dataDetails.length -1].age = age
+    console.log(dataDetails)
+    setDataDetails([...dataDetails])
   }
   return (
     <>
-      <h1>Updating Objects in State</h1>
-      {/* <button onClick={handleName} >Update Name</button> */}
-      <input type="text" placeholder="update name" onChange={(event)=>handleName(event.target.value)} />
-      <br /><br />
-      <input type="text" placeholder="update city" onChange={(event)=>handleCity(event.target.value)} />
-      <br /><br />
-      <input type="text" placeholder="update coutry" onChange={(event)=>handleCountry(event.target.value)} />
-      <h2>Name: {data.name}</h2>
-      <h2>City: {data.address.city}</h2>
-      <h2>Country: {data.address.country}</h2>
+      <h1>Updating Array in State</h1>
+      <input type="text" placeholder='enter name' onChange={(e)=>handleUser(e.target.value)} />
+      {
+        data.map((item, i)=>(
+          <h3 key={i}>{item}</h3>
+        ))
+      }
+      <hr /><hr />
+      {
+        dataDetails.map((item, i)=>(
+          <h2 key={i}>{item.name} {item.age}</h2>
+        ))
+      }
+
+      <input type="text" placeholder='updateage' onChange={(e)=>handleAge(e.target.value)} />
     </>
   )
 }
